@@ -29,7 +29,6 @@ error_reporting(E_ALL | E_STRICT);
 iconv_set_encoding('internal_encoding', 'UTF-8');
 extension_loaded('mbstring') && mb_internal_encoding('UTF-8');
 umask(0);
-@header('X-Powered-By: Nette Framework'); // @ - headers may be sent
 @header('Content-Type: text/html; charset=utf-8'); // @ - headers may be sent
 
 
@@ -57,9 +56,6 @@ require_once __DIR__ . '/Utils/Html.php';
 Nette\Diagnostics\Debugger::_init();
 
 Nette\Utils\SafeStream::register();
-
-/**/class_alias('Nette\Config\Configurator', 'Nette\Configurator');/**/
-
 
 /**
  * Nette\Callback factory.
